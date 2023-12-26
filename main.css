@@ -1,0 +1,246 @@
+*{ /* Resetando as configurações*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container, #cabecalho {
+    max-width: 1024px; /*largura máxima*/
+    width: 100%;
+    margin: 0 auto;
+}
+
+#bar {
+    width: 100%;
+    height: 20px;
+    background-color: #653052;
+    position: fixed;
+    top: 0;
+}
+
+#cabecalho {
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cabecalho img {
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o padding */
+    display: flex; /* Alinha os itens da lista horizontalmente */
+    justify-content: space-between; /* Distribui os itens igualmente ao longo da linha */
+}
+
+nav li {
+    font-weight: bold;
+    list-style: none; /*Tirando os pontos da listas*/
+    margin-right: 20px; /* Adiciona uma margem à direita para espaço entre os itens */
+}
+
+nav ul li a{
+    text-decoration: none; /*Tirando os traços*/
+    color: #653052;
+}
+
+nav ul li a:hover{
+    color: #FEC12C /*Adicionei um efeito de hover no links*/
+}
+
+.sobreEbac {
+    max-width: 100%;
+    display: flex;
+    align-items:flex-end;
+    margin-bottom: 30px;
+}
+
+.sobreEbac div {
+    margin-left: 30px;
+}
+
+.sobreEbac img {
+    height: 35vh;
+}
+
+.sobreEbac h2 {
+    font-weight: bolder;
+    color: #653052;
+}
+
+.produto h2 {
+    background-color: #653052;
+    font-weight: bolder;
+    color: white;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.produto p {
+    margin-bottom: 20%;
+    max-height: 100px;
+    overflow-block: 100%; 
+}
+
+.produtos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Define o espaço entre os elementos do grid */
+    align-items: stretch;
+}
+
+.produtos {
+    display: flex;
+    flex-direction: column;
+}
+
+.produtos img{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10%;
+}
+
+.produtos h3{
+    color: #653052;
+    margin-bottom: auto;
+}
+
+.produtos button {
+    margin-top: auto;
+    padding: 23px;
+    max-width: 100%;
+    background-color: #653052;
+    font-size: medium;
+    color: white;
+    border: none;
+}
+
+.produtos button:hover{
+    background-color: #FEC12C /*Adicionei um efeito de hover no botão*/
+}
+
+footer {
+    margin-top: 80px;
+    padding: 30px;
+    background-color: #653052;
+    color: white;
+}
+
+footer p {
+    max-width: 1024px; /*largura máxima*/
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*Tornando responsivo: Celular 767px*/
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 90%;
+    }
+
+    #cabecalho {
+        display: block;
+        flex-direction: column;
+    }
+
+    #cabecalho img {
+        width: 70%;
+        margin-top: 5%;
+    }
+
+    .sobreEbac div {
+        margin-left: 0;
+        padding-right: 20px;
+    }
+
+    .sobreEbac {
+        max-width: 100%;
+        display: block;
+    }
+
+    .sobreEbac img {
+        width: 95%;
+    }
+
+    .produto h2 {
+        max-width: 95%;
+    }
+
+    .produtos-container {
+        display: block;
+        max-width: 95%;
+    }
+    
+    .produtos img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .produtos-container button {
+        display: block;
+        width: 100%;
+        font-size: 1.3em;
+        padding: 5%;
+    }
+
+    .produtos {
+        display: block;
+    }
+}
+
+/*Deixando so site responsivo: tablet - 768px (mínimo) e 1023px (máximo)*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+        padding-right: 5%; /* Adiciona espaço à direita do conteúdo */
+    }
+
+    #cabecalho {
+        display: block;
+        flex-direction: column;
+    }
+
+    #cabecalho img {
+        width: 40%;
+    }
+
+    .sobreEbac {
+        display: block;
+    }
+
+    .sobreEbac img {
+        width: 100%;
+    }
+
+    .sobreEbac div {
+        margin-left: 0;
+        padding-right: 5%;
+    }
+
+    .produtos-container {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        gap: 10px; /* Define o espaço entre os elementos do grid */
+    }
+
+    .produtos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Isso distribui o espaço igualmente entre os itens */
+    }
+
+/*Ajustando a versão para desktop: 1024px (mínimo)*/
+
+    @media screen and (min-width: 1024px) {
+        .container {
+        width: 1024px;
+        margin: 10%;
+        }
+    }
+}
